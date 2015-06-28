@@ -32,19 +32,41 @@
 \newpage
 \chapter{Introduction}
 \justify
-\large{In modern Security Operations and Incident Response the experts working on each respective field have to deal daily with huge amounts of data. This data is constantly analysed filtered and mined in order for previously unnoticed patterns to emerge and valuable insights to be extracted. During this process several visualization techniques are employed with the purpose of presenting the discovered insights. }
+\large{In modern Security Operations and Incident Response, experts working on each respective field have to deal daily with huge amounts of data. This data is constantly analysed filtered and mined in order for previously unnoticed patterns to emerge and valuable insights to be extracted. During this process several visualization techniques are employed with the purpose of presenting the discovered insights. }
 
-\section{Exploratory Data Analysis}
-\large{Exploratory Data Analysis (EDA) is the approach of applying analytic and most often visual methods over data sets in order to summarise their main attributes \cite{eda1}. Its aim, according to its inceptor John Tukey \cite{eda2}, is to suggest hypotheses about the causes of observed phenomena, assess assumptions that will form the basis for statistical inference, support the selection of appropriate statistical tools and techniques, and finally prrovide a basis that will trigger further data collection. \\ That being said, we can distinguish EDA from visual sketching in the sense that EDA is about exploring the structure of the data in order to gain insights and discover erroneous values while pure visualization is about displaying the visual layout of the data and selecting the best visual encodings. Moreover EDA is an approach designed to help the Data Analyst themselves while visual sketching aims to present discovered insights to an audience.}
+\section{Visualization Goals}
+\large{
+In their paper Visual Analytics: Scope and Challenges, Kaim et al \cite{kaim} define the goals of information visualization into three distinct categories namely, Presentation, Exploratory Data Analysis and Confirmatory Data Analysis.}
 
-\section{Confirmatory Data Analysis} 
-\large{While Exploratory Data Analysis is a process that starts without a certain hypothesis stated  }
+\subsection{Presentation} 
+\large{
+The term Presentation can have several meanings depending on the context. In our example we could also refer to it as Visual Sketching. The aim of this process is to select those visual elements that most effectively communicate the findings of the analysis by translating a fixed set of facts to visual encodings.}
+
+\subsection{Exploratory Data Analysis}
+\large{Exploratory Data Analysis (EDA) is the approach of applying analytic and most often visual methods over data sets in order to summarise their main attributes \cite{eda1}. Its aim, according to its inceptor John Tukey \cite{eda2}, is to suggest hypotheses about the causes of observed phenomena, assess assumptions that will form the basis for statistical inference, support the selection of appropriate statistical tools and techniques, and finally prrovide a basis that will trigger further data collection. \\\\ That being said, we can distinguish EDA from visual sketching in the sense that EDA is about exploring the structure of the data in order to gain insights and discover erroneous values while pure visualization is about displaying the visual layout of the data and selecting the best visual encodings. Moreover EDA is an approach designed to help the Data Analyst themselves while visual sketching aims to present discovered insights to an audience.}
+
+\subsection{Confirmatory Data Analysis} 
+\large{While Exploratory Data Analysis is a process that starts without a certain hypothesis stated, Confirmatory Data Analysis (CDA) one or more hypotheses about the Data serve as a starting point \cite{kaim}. For that reason CDA is often referred to as Statistical Hypothesis Testing \cite{cda1}. CDA can be thought of as a goal-oriented examination of the hypotheses made. Thus visual methods are employed in order to help confirm or reject these hypotheses.}
+
+\section{Design Principles}
+
+\subsection{Chartjunk \& Data-Ink Ratio}
+\large{The term Charjunk was coined by Edward Tufte, statistician and Information Visualization pioneer in his book The Visual Display of Quantitative Information \cite{tufte1}. It refers to all the visual elements present in a graph or chart that are not necessary for communicating the represented information to the audience. According to Tufte, driven by their desire to make a chart appear more scientific and precise, enliven the display or simply show their artistic skills, designers generate visualizations that contains certain amounts of 'ink' that tell the audience nothing new. The intensity of Chartjunk can vary from simple and standard charting elements such as gridlines and axes, that may distract from the main message, to various redundant decorations that end up making the graph totally unreadable. Such decorative elements can be, for example, 3D representations, images (e.g. the image of a Euro banknote when discussing wages), gradient colors, noisy backgrounds, etc. Chartjunk can easily turn a good visualization into a misleading graph, which automatically makes it a bad visualization.\\\\
+In order to quantify the amount of Charjunk in a visualization Tufte introduced the term Data-Ink Ratio in the same book. Data-Ink Ratio is simply the ratio of the amount of 'ink' that is used to represent the data, over the total amount of 'ink' used for the whole chart itself. Otherwise stated Data-Ink Ratio can be defined as '1 - the proportion of the graphic that can be erased without hiding any information'. Although the term 'ink' is rather vague and not easily measurable, it is easy to intuitively calculate the Data-Ink Ratio and understand that a low number indicates a chart that contains a lot of Chartjunk.}
+
+\subsection{
 
 \begin{thebibliography}{99}
 \bibitem{eda1}
 Behrens, J. (1997). Principles and procedures of exploratory data analysis. Psychological Methods, 2(2), pp.131-160.
 \bibitem{eda2}
 Tukey, J. (1977). Exploratory data analysis. Reading, Mass.: Addison-Wesley Pub. Co.
+\bibitem{kaim}
+Keim, D., Mansman, F., Schneidewind, J., Thomas, J. and Ziegler, H. (2008). Visual Ana- lytics: Scope and Challenges. Lecture notes in Computer Science. Springer, pp.76-90.
+\bibitem{cda1}
+Ren, D. (2009). Understanding Statistical Hypothesis Testing. Journal of Emergency Nursing, 35(1), pp.57-59.
+\bibitem{tufte1}
+Tufte, E. (1983). The visual display of quantitative information.
 \end{thebibliography}
 
 \end{document}
