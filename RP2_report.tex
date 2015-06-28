@@ -1,6 +1,8 @@
 \documentclass[16pt]{extreport}
+\usepackage[none]{hyphenat}
 \usepackage{fontspec}
 \usepackage{titling}
+\usepackage[document]{ragged2e}
 \setmainfont{Avenir}
 
 \begin{document}
@@ -16,20 +18,33 @@
 \large{Nikolaos.Triantafyllidis@os3.nl}\\[0.3cm]
 \large{Supervised by:}\\
 \Large{Renato Fontana, FoxIT}\\
-\large{renato.fontana@fox-it.com}\\[5cm]
+\large{renato.fontana@fox-it.com}\\[0.1cm]
+\Large{Lennart Haagsma, FoxIT}\\
+\large{haagsma@fox-it.com}\\[4cm]
 \today
 \end{center}
 \thispagestyle{empty}
 \clearpage
 
+\tableofcontents
+ 
+
 \newpage
 \chapter{Introduction}
-\section{Foo}
-\large{
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
-\
+\justify
+\large{In modern Security Operations and Incident Response the experts working on each respective field have to deal daily with huge amounts of data. This data is constantly analysed filtered and mined in order for previously unnoticed patterns to emerge and valuable insights to be extracted. During this process several visualization techniques are employed with the purpose of presenting the discovered insights. }
 
+\section{Exploratory Data Analysis}
+\large{Exploratory Data Analysis (EDA) is the approach of applying analytic and most often visual methods over data sets in order to summarise their main attributes \cite{eda1}. Its aim, according to its inceptor John Tukey \cite{eda2}, is to suggest hypotheses about the causes of observed phenomena, assess assumptions that will form the basis for statistical inference, support the selection of appropriate statistical tools and techniques, and finally prrovide a basis that will trigger further data collection. \\ That being said, we can distinguish EDA from visual sketching in the sense that EDA is about exploring the structure of the data in order to gain insights and discover erroneous values while pure visualization is about displaying the visual layout of the data and selecting the best visual encodings. Moreover EDA is an approach designed to help the Data Analyst themselves while visual sketching aims to present discovered insights to an audience.}
 
+\section{Confirmatory Data Analysis} 
+\large{While Exploratory Data Analysis is a process that starts without a certain hypothesis stated  }
 
+\begin{thebibliography}{99}
+\bibitem{eda1}
+Behrens, J. (1997). Principles and procedures of exploratory data analysis. Psychological Methods, 2(2), pp.131-160.
+\bibitem{eda2}
+Tukey, J. (1977). Exploratory data analysis. Reading, Mass.: Addison-Wesley Pub. Co.
+\end{thebibliography}
 
 \end{document}
