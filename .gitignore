@@ -1,5 +1,8 @@
 *.log
+*.out
 *.toc
 *.gz
 *.pdf
 *.aux
+*.png
+*.jpg

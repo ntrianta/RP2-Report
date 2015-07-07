@@ -2,6 +2,7 @@
 \usepackage[none]{hyphenat}
 \usepackage{fontspec}
 \usepackage{titling}
+\usepackage{hyperref}
 \usepackage[document]{ragged2e}
 \setmainfont{Avenir}
 
@@ -26,37 +27,411 @@
 \thispagestyle{empty}
 \clearpage
 
+\begin{abstract}
+\parbox{\linewidth}{
+\justify
+\normalsize{
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}}
+\end{abstract}
+
 \tableofcontents
  
 
 \newpage
 \chapter{Introduction}
-\justify
-\large{In modern Security Operations and Incident Response, experts working on each respective field have to deal daily with huge amounts of data. This data is constantly analysed filtered and mined in order for previously unnoticed patterns to emerge and valuable insights to be extracted. During this process several visualization techniques are employed with the purpose of presenting the discovered insights. }
+\parbox{\linewidth}{
+	\justify
+	\large{In modern Security Operations and Incident Response, experts working on each respective field have to deal daily with huge amounts of data. This data is constantly analysed filtered and mined in order for 	previously unnoticed patterns to emerge and valuable insights to be extracted. During this process several visualization techniques are employed with the purpose of presenting the discovered insights. }
+}
+\hfill \break\\
+
+\parbox{\linewidth}{
+	\justify
+	\large{One of the most valuable sources of information during this process is network traffic data. The problem, however, lies on the fact that most visualization tools provide graphs that are either badly designed and non functional or provide charts that are aesthetically pleasing and functional, but are mostly volume based visual encodings of the data that fail provide a clear narrative. }}
+\hfill \break\\
+
+\parbox{\linewidth}{
+	\justify
+	\large{Having mentioned the aesthetic value of a graph, it is important to stress that improving the appearance of a visualization is often overlooked as an unnecessary luxury that adds no value to the function. That is, however, far from the truth. Improving the aesthetics of the graph is not something that just adds beauty to the graph, but following the standard design principles it can also add a lot of power to the visualization. For example, removing visual noise and choosing the correct colors does not only enable users with impaired vision to view the graph more clearly, but also makes it less tiring for everyone to concentrate on a graph for longer periods of time. Correcting simple design mistakes is crucial to making the data stand out and not be lost in the visualization.}}
+\hfill \break\\
+
+\parbox{\linewidth}{
+	\justify
+	\large{Having mentioned the aesthetic value of a graph, it is important to stress that improving the appearance of a visualization is often overlooked as an unnecessary luxury that adds no value to the function. That is, however, far from the truth. Improving the aesthetics of the graph is not something that just adds beauty to the graph, but following the standard design principles it can also add a lot of power to the visualization. For example, removing visual noise and choosing the correct colors does not only enable users with impaired vision to view the graph more clearly, but also makes it less tiring for everyone to concentrate on a graph for longer periods of time. Correcting simple design mistakes is crucial to making the data stand out and not be lost in the visualization.}}
+\hfill \break\\
+
+\parbox{\linewidth}{
+	\justify
+	\large{In the rest of this chapter we will introduce the research questions that we will try to answer as well as demonstrate any ethical concerns that we came across during this project. Chapter 2 provides all the necessary background and literature review. Chapter 3 presents all performed work and research approach, while chapter 4 summarizes our conclusions. Finally the last chapter suggests future extensions to this project.}}
+\hfill \break\\
+
+\chapter{Background}
 
 \section{Visualization Goals}
-\large{
-In their paper Visual Analytics: Scope and Challenges, Kaim et al \cite{kaim} define the goals of information visualization into three distinct categories namely, Presentation, Exploratory Data Analysis and Confirmatory Data Analysis.}
+
+\parbox{\linewidth}{
+	\justify
+	\large{
+	In their paper Visual Analytics: Scope and Challenges, Kaim et al \cite{kaim} define the goals of Information Visualization into three distinct categories namely, Presentation, Exploratory Data Analysis and 		Confirmatory Data Analysis.}
+}
 
 \subsection{Presentation} 
+\parbox{\linewidth}{
+\justify
 \large{
-The term Presentation can have several meanings depending on the context. In our example we could also refer to it as Visual Sketching. The aim of this process is to select those visual elements that most effectively communicate the findings of the analysis by translating a fixed set of facts to visual encodings.}
-
+The term Presentation can have several meanings depending on the context. In our example we could also refer to it as Visual Sketching. The aim of this process is to select those visual elements that most effectively communicate the findings of the analysis by translating a fixed set of facts to visual encodings.}}
+\hfill \break\\
 \subsection{Exploratory Data Analysis}
-\large{Exploratory Data Analysis (EDA) is the approach of applying analytic and most often visual methods over data sets in order to summarise their main attributes \cite{eda1}. Its aim, according to its inceptor John Tukey \cite{eda2}, is to suggest hypotheses about the causes of observed phenomena, assess assumptions that will form the basis for statistical inference, support the selection of appropriate statistical tools and techniques, and finally prrovide a basis that will trigger further data collection. \\\\ That being said, we can distinguish EDA from visual sketching in the sense that EDA is about exploring the structure of the data in order to gain insights and discover erroneous values while pure visualization is about displaying the visual layout of the data and selecting the best visual encodings. Moreover EDA is an approach designed to help the Data Analyst themselves while visual sketching aims to present discovered insights to an audience.}
+
+\large{Exploratory Data Analysis (EDA) is the approach of applying analytic and most often visual methods over data sets in order to summarise their main attributes \cite{eda1}. Its aim, according to its inceptor John Tukey \cite{eda2}, is to suggest hypotheses about the causes of observed phenomena, assess assumptions that will form the basis for statistical inference, support the selection of appropriate statistical tools and techniques, and finally prrovide a basis that will trigger further data collection.}
+\hfill \break\\
+\parbox{\linewidth}{
+\justify
+\large{That being said, we can distinguish EDA from visual sketching in the sense that EDA is about exploring the structure of the data in order to gain insights and discover erroneous values while pure visualization is about displaying the visual layout of the data and selecting the best visual encodings. Moreover EDA is an approach designed to help the Data Analyst themselves while visual sketching aims to present discovered insights to an audience.}}
+\hfill \break\\
 
 \subsection{Confirmatory Data Analysis} 
-\large{While Exploratory Data Analysis is a process that starts without a certain hypothesis stated, Confirmatory Data Analysis (CDA) one or more hypotheses about the Data serve as a starting point \cite{kaim}. For that reason CDA is often referred to as Statistical Hypothesis Testing \cite{cda1}. CDA can be thought of as a goal-oriented examination of the hypotheses made. Thus visual methods are employed in order to help confirm or reject these hypotheses.}
+\parbox{\linewidth}{
+\justify
+\large{While Exploratory Data Analysis is a process that starts without a certain hypothesis stated, Confirmatory Data Analysis (CDA) one or more hypotheses about the Data serve as a starting point \cite{kaim}. For that reason CDA is often referred to as Statistical Hypothesis Testing \cite{cda1}. CDA can be thought of as a goal-oriented examination of the hypotheses made. Thus visual methods are employed in order to help confirm or reject these hypotheses.}}
+\hfill \break\\
 
 \section{Design Principles}
 
 \subsection{Chartjunk \& Data-Ink Ratio}
-\large{The term Charjunk was coined by Edward Tufte, statistician and Information Visualization pioneer in his book The Visual Display of Quantitative Information \cite{tufte1}. It refers to all the visual elements present in a graph or chart that are not necessary for communicating the represented information to the audience. According to Tufte, driven by their desire to make a chart appear more scientific and precise, enliven the display or simply show their artistic skills, designers generate visualizations that contains certain amounts of 'ink' that tell the audience nothing new. The intensity of Chartjunk can vary from simple and standard charting elements such as gridlines and axes, that may distract from the main message, to various redundant decorations that end up making the graph totally unreadable. Such decorative elements can be, for example, 3D representations, images (e.g. the image of a Euro banknote when discussing wages), gradient colors, noisy backgrounds, etc. Chartjunk can easily turn a good visualization into a misleading graph, which automatically makes it a bad visualization.\\\\
-In order to quantify the amount of Charjunk in a visualization Tufte introduced the term Data-Ink Ratio in the same book. Data-Ink Ratio is simply the ratio of the amount of 'ink' that is used to represent the data, over the total amount of 'ink' used for the whole chart itself. Otherwise stated Data-Ink Ratio can be defined as '1 - the proportion of the graphic that can be erased without hiding any information'. Although the term 'ink' is rather vague and not easily measurable, it is easy to intuitively calculate the Data-Ink Ratio and understand that a low number indicates a chart that contains a lot of Chartjunk.}
+\parbox{\linewidth}{
+\justify
+\large{The term Charjunk was coined by Edward R. Tufte, statistician and Information Visualization pioneer in his book The Visual Display of Quantitative Information \cite{tufte1}. It refers to all the visual elements present in a graph or chart that are not necessary for communicating the represented information to the audience. According to Tufte, driven by their desire to make a chart appear more scientific and precise, enliven the display or simply show their artistic skills, designers generate visualizations that contains certain amounts of 'ink' that tell the audience nothing new. The intensity of Chartjunk can vary from simple and standard charting elements such as gridlines and axes, that may distract from the main message, to various redundant decorations that end up making the graph totally unreadable. Such decorative elements can be, for example, 3D representations, images (e.g. the image of a Euro banknote when discussing wages), gradient colors, noisy backgrounds, etc. Chartjunk can easily turn a good visualization into a misleading graph, which automatically makes it a bad visualization.}}
+\hfill \break\\
+\parbox{\linewidth}{
+\justify
+\large{
+In order to quantify the amount of Charjunk in a visualization Tufte introduced the term Data-Ink Ratio in the same book. Data-Ink Ratio is simply the ratio of the amount of 'ink' that is used to represent the data, over the total amount of 'ink' used for the whole chart itself. Otherwise stated Data-Ink Ratio can be defined as '1 - the proportion of the graphic that can be erased without hiding any information'. Although the term 'ink' is rather vague and not easily measurable, it is easy to intuitively calculate the Data-Ink Ratio and understand that a low number indicates a chart that contains a lot of Chartjunk.}}
+\hfill \break\\
 
-\subsection{
+\subsection{Lie Factor}
+\parbox{\linewidth}{
+\justify
+\large{Lie Factor is another term introduced by Edward Tufte, aimed to describe the distortion of the magnitudes presented in a chart when compared to the real proportions. In other words it denotes the relationship between the effect reflected in the data it self and the effect displayed in the graphic. It is defined as the ratio of the 'size of the effect shown in the graphic' over the 'size of the effect shown in the data'. The size of the effect in turn is defined as the ratio of the second value minus the first value over the first value.}}
+\hfill \break\\
 
-\begin{thebibliography}{99}
+
+We can make this more clear by using a very famous example: 
+
+\begin{center}
+	\begin{figure}[h]
+		\includegraphics[scale=0.5]{lie.jpg}
+		\caption{Visualization with an extremely high Lie Factor}
+	\end{figure}
+\end{center}
+
+\parbox{\linewidth}{
+\justify
+\large{This graphic was published in the New York times in 1978 and it presents the mandated fuel standards for cars during that period. The actual data states that between 1978 and 1985 the standard required an increase of 53\% in mileage, from 18 miles per gallon to 27.5 mpg. In the graph however the 1985 value is presented with a line 5.3 inches long while the 1978 value is presented with a line of 0.6 inches long. The increase between the lengths of the lines is actually 783\%. If we calculate the lie factor we have ((5.3 - 0.6)/0.6)/((27.5-18)/18) = 7.8/0.53 = 14.8. A lie factor of 14.8 is apparently huge. }}
+\hfill \break\\
+
+\parbox{\linewidth}{
+\justify
+\large{
+It is obvious that an ideally accurate graph has a lie factor of exactly 1. However, since inherent distortion factors are present in any type of visualization, any value between 0.95 and 1.05 is acceptable. Values less than the lower margin mean that the graph obscures the change in the data, while a value greater than the high margin means that the graph exaggerates the changes in the data. This distortion can be intentional but in a lot of cases it stems from poor understanding of the visualization principles.}}
+\hfill \break \\
+
+\subsection{Gestalt Principles of Grouping}
+\parbox{\linewidth}{
+\justify
+\large{Gestalt psychology refers to a mind theory put together by the Berlin School of Experimental Psychology that deals with understanding these functions of the brain that allow human beings to acquire and maintain perceptions. The term Gestalt is a German word meaning 'form' or 'shape'. When it comes to graphical design, a set of principles put together by Gestalt psychologists, help us understand the way the audience understands visual stimuli.  These principles are the following: }}\clearpage
+\subsubsection{Similarity}
+\parbox{\linewidth}{
+	\justify
+	\large{
+	The term refers to the tendency of the human brain to perceive distinct objects as groups that form a unified whole due to the fact that they appear similar in shape, color or size. When similarity occurs in a visual 	message, objects that are dissimilar to the rest become focal points. This is called Anomaly and it is often used to draw emphasis on certain objects. }}
+\hfill \break \\[1cm]
+	
+	\begin{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{similarity.png}
+		\caption[]{Gestalt Similarity. The circles are grouped together depending on their color.}
+	\end{figure}
+	\end{center}
+	\clearpage
+	
+\subsubsection{Continuation}
+	\parbox{\linewidth}{
+	\justify
+	\large{
+	Continuation occurs when the eye is guided through one object towards another object. For example, elements arranged on a line or curve, appear to be more related to each other than if they were arranged in a different setup.}}
+\hfill \break \\[1cm]
+	\begin{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{continuation.png}
+		\caption[]{Arangement (a) is much more likely to perceived in the way depicted in (b) rather than the way shown in (c).}
+	\end{figure}
+	\end{center}
+	\clearpage
+	
+\subsubsection{Closure}
+	\parbox{\linewidth}{
+	\justify
+	\large{
+	This effect occurs when a visual object is drawn partially or with spaces that are not completely enclosed. If enough of the space is drawn our brains tend to complete the missing space and perceive the image as a whole. For example a series of dots arranged in a cyclical fashion are perceived as a complete circle.}}
+\hfill \break \\[1cm]
+
+	\begin{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{closure.png}
+		\caption[]{The shapes are perceived as circle and square respectively, although they are drawn as a series of broken lines.}
+	\end{figure}
+	\end{center}
+	\clearpage
+	
+\subsubsection{Proximity}
+	\parbox{\linewidth}{
+	\justify
+	\large{
+	Proximity simply occurs when elements are placed closely together. In this situation this elements tend to be perceived as a group. For example a number of squares placed in space with no proximity tend to be perceived as unities. When placed close together in a square arrangement, they are perceived as one large square. }}
+\hfill \break \\[1cm]
+
+	\begin{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{proximity.png}
+		\caption[]{Two examples of Gestalt Proximity. The shapes that are placed close to each other are perceived as groups.}
+	\end{figure}
+	\end{center}
+	\clearpage
+	
+\subsubsection{Figure and Ground}
+	\parbox{\linewidth}{
+	\justify
+	\large{
+	The human eye tends to differentiate an visual element form its surrounding space. A form or a shape is perceived as Figure (object), while the area or negative space that surrounds it is perceived as Ground (background). Proper balance between figure and ground can make the perceived image more clear, while the use of unusual figure/ground relationships can add interest to a visual stimulus. }}
+\hfill \break \\[1cm]
+
+	\begin{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{figure.png}
+		\caption[]{The word 'Gestalt' is perceived as Figure, while the surrounding white space is perceived as Ground.}
+	\end{figure}
+	\end{center}
+	\clearpage
+\subsection{Pre-attentive processing}
+\parbox{\linewidth}{
+\justify
+\large{
+The term Pre-attentive processing refers to the fact that the human body processes sensory information before the conscious mind begins to perceive and and understand the objects that are present in its environment \cite{preattentive}. This process is very fast and enables us to simultaneously perceive a large number of basic environmental stimuli such as temperature, light and sound. Attentive (conscious) processing on the contrary is performed in a serial manner, and for that reason it is much slower \cite{treisman}.}}
+\hfill \break\\
+\parbox{\linewidth}{
+\justify
+\large{
+Pre-attentive processing in vision relates to the way the human eye is constructed, with the rods and cones that are arranged across the retina which are tuned to perceive a certain visual attribute such as size and color.  
+The perception of a visual object is a combination of these simple visual attributes . Thus, even if the recognition of an object as a whole might require a certain conscious effort, the basic visual attributes are perceived almost instantly. That means that if we want to want to visually encode the data in a way that allows fast understanding by the audience we should use certain pre-attentive attributes. In the case that we want certain part of the data to be more easily noticeable than the rest of the set we have to encode it with a different pre-attentive attribute \cite{few1}.
+}}
+\hfill \break\\
+Below follows a schematic that presents certain pre-attentive attributes that are particularly useful when creating visualizations:
+
+\begin{center}
+	\begin{figure}[h]
+		\includegraphics[scale=0.28]{preattentive.png}
+		\caption[]{Pre-attentive attributes \footnotemark .}
+	\end{figure}
+\end{center}
+\footnotetext{Redrawing based on the original schematic by Stephen Few \cite{few1}. In case of black and white viewing of this document note that in the 'Hue' box one of the circles is in color blue.}
+
+Not all the above attributes are equal in terms of perception. Not only certain attributes are stronger than others but also certain attributes have a greater perceptual value when it comes to the encoding of different types of data. For example while size can be very easily perceived in a quantitative way, hue cannot and should not be used to encode numerical values \cite{few1}. 
+
+\clearpage
+
+
+\section{Visualization Process} 
+
+\parbox{\linewidth}{
+\justify
+\large{
+Numerous Visualization experts have tried to define the process for visualizing data. Ben Schneideman in his 1996 paper "The eyes have it: A Task by Data Type Taxonomy for Information Visualizations" \cite{schneideman} introduced the Visual Information Seeking Mantra that is still widely accepted today and can be summarized as: "Overview first, zoom and filter, details on demand".}}
+\hfill \break \\
+
+
+
+\parbox{\linewidth}{
+\justify
+\large{
+Kaim et al \cite{kaim}, however, transform the same mantra into the following: "Analyse First - Show the Important - Zoom, Filter and Analyse Further - Details on Demand". In fact, they summarise the whole Visual Analytics process into the schematic below:}}
+\hfill \break \\
+
+\begin{center}
+	\begin{figure}[h]
+		\includegraphics[scale=0.28]{process.png}
+		\caption[]{Visual Analytics Process \footnotemark .}
+	\end{figure}
+\end{center}
+\footnotetext{Redrawing based on the original schematic by Kaim et. al \cite{kaim}}
+
+\parbox{\linewidth}{
+\justify
+\large{According to the schematic, Visualization is an iterative process oriented towards gaining certain insights (denoted as \textbf{I} in the schematic). The process starts with a number of sources (websites, newspapers, books, etc) from which we then construct a number of datasets (denoted with \textbf{S}). The desired insights are obtained either from the generated visualizations of the data sets (denoted with \textbf{V}) or from the confirmation (or rejection), of the hypotheses that were formulated earlier (denoted as \textbf{H}).}}
+\hfill \break\\
+
+\parbox{\linewidth}{
+\justify
+\large{In his doctoral dissertation "Computational Information Design" \cite{fry1}, Benjamin Fry provides a much less formalistic, yet much more understandable summarization of the Visualization process. He defines seven discrete steps, namely "Acquire, Parse, Filter, Mine, Represent, Refine, Interact". Acquisition and Parsing are tasks that belong to Computer Science. Filtering and Mining are processes that stem from Mathematics, Statistics and Data Mining, while Representation and Refinement belong to the field of Graphic Design. Finally interaction stems from the principles of Information Visualization and Human Computer Interaction. }}
+
+\hfill \break\\
+
+\chapter{Approach}
+\parbox{\linewidth}{
+\justify
+\large{
+This chapter describes the approach we followed towards discovering the most suitable visualizations for certain parts of network data, and towards building a small proof of concept that realizes our assumptions and findings. 
+}}
+
+\section{Data Transformation Model}
+\parbox{\linewidth}{
+\justify
+\large{
+In order to be able to create visualizations of network traffic data we need to bring the data in a format that is suitable for this sort of operations. To that aim we define a model that follows the data from the moment that it populates a central database until the phase that it is in a format ready to be visualized.}}
+\hfill \break\\
+\parbox{\linewidth}{
+\justify
+\large{
+After the packet capture files have been processed and parsed into a non-relational database, we need to create certain projections, i.e. selections of certain fields from the master data set. These projections will populate new datasets and will have a 1-1 relationship with the records in the master database. Afterwards, based on these projections we will create views of the data set by filtering out uninteresting entries, running aggregations on the records, or performing Data Mining tests on the data. The created views are ready to be visualized, but since one or more visualization types can apply to the same view, the last step in the model entails visualizing the views using different visualization types and assessing which type provides better representation and what insights we can gain from them.}}
+\hfill \break\\
+The picture below summarizes the above model:
+
+\begin{center}
+	\begin{figure}[h]
+		\includegraphics[scale=0.4]{model.png}
+		\caption[]{Data Transformation Model}
+	\end{figure}
+\end{center}
+\clearpage
+
+
+\section{Proposed Visualizations}
+\parbox{\linewidth}{
+\justify
+\large{
+To select the most appropriate visualization we first need to identify the insight that we are trying to either communicate or discover via the visual encodings. We then refine the visualization aiming to stress that insight, by removing all chartjunk, i.e. all these elements in the graph that do not add anything new to the message. Note that elements traditionally not thought as chartjunk such as X and Y axes, in certain created visualizations were removed as well in order to add emphasis on the communicated insight.}} 
+\hfill \break \\
+\parbox{\linewidth}{
+\justify
+\large{
+For the scope of this research the visualizations were solely based on Network Flow data. That means, according to the previously defined model, a selected projection the following fields: Source IP Address, Destination IP Address, Source Port, Destination Port, Packet Length and Timestamp. The visualizations presented below are categorized according to the communicated insight.}}
+\hfill \break \\
+
+\subsection{Outlier Detection}
+\parbox{\linewidth}{
+\justify
+\large{
+We call outliers these values within a data set that do not follow the expected behaviour. Being able to spot outliers is of utmost importance for Security Operations since security incidents are exactly that, outlier values. }}
+\parbox{\linewidth}{
+\justify
+\large{Outliers are very easy to spot when the dataset is visually mapped to a Scatter plot. A Scatter plot is an ideal visualization of 2-d data that are not dependent on each other, e.g. they do not follow a certain timeline. If we have a third dimension to depict we need to use a Bubble Chart. In this type of visualization the first two dimensions are encoded towards the X and Y axes while the third dimension is encoded in the size of the data points.}}
+\hfill \break \\
+
+
+Let us look at one example:
+\begin{center}
+	\begin{figure}[h]
+		\includegraphics[scale=0.4]{scatter.png}
+		\caption[]{12 hour period IP Flow}
+	\end{figure}
+\end{center}
+
+\parbox{\linewidth}{
+\justify
+\large{In this example the flows are aggregated live, on demand, from a 12 hour period packet capture. The horizontal planar dimension encodes the number of packets within a flow while the vertical planar dimension encodes the number of bytes per flow. The radius of each circle encodes the average number of bytes in each flow. Hovering over each circle reveals a tooltip that contains additional information such as the source and destination addresses for each flow event as well as the data encoded in the scatterplot, i.e. number of packets, number of bytes and average packet size. Clicking on each bubble gives us additional information (24h traffic volume, top port composition, etc.) about each event, as shown in Figure~\ref{fig:det}}}
+
+\begin{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.25]{det.png}
+		\caption[]{Details on Demand.}
+		\label{fig:det}
+	\end{figure}
+\end{center}
+
+
+\parbox{\linewidth}{
+\justify
+\large{
+Spotting outlier values with a large third dimension, is a trivial task. Any data point that is placed away from a region that contains multiple circles is an outlier value. However outlier values with a smaller third dimension are hidden pretty easily. This is due to the fact that a large domain of numbers is mapped to a rather narrow range of circle radii. Even in a two dimensional scatterplot, data points pushed to the edges of the graph are in some cases easy to miss.}}
+\parbox{\linewidth}{
+\justify
+\large{This leads us to conceptualize a new method of visualizing outliers, according to which the outlier values are mapped towards the center of the graph while expected values are pushed towards the edges. An example mockup follows:}}
+
+\begin{center}
+	\begin{figure}[h]
+		\includegraphics[scale=0.37]{outliers.png}
+		\caption[]{Region sorting.}
+		\label{fig:det}
+	\end{figure}
+\end{center}
+\clearpage
+\parbox{\linewidth}{
+\justify
+\large{What we basically do here is divide the screen in two parts, with one part mapping the large outlier values and the other part mapping the small outlier values. This is essentially a sorting of the regions within a scatterplot according to which the regions that have a small number of members are pushed towards the middle of the screen and the expected values are pushed to the edges. The circles are placed in categories depending on the number of occurrences which are mapped on the radius of the circles. Thus, for example, 1 to 5 occurrences are placed towards the center of the graph and are given a larger size. Since this type of graph has not been implemented or tested with real world data, we will not be tempted to give it a name at this point.}}
+
+\subsection{Volume relationship \& Asymmetry}
+
+\parbox{\linewidth}{
+\justify
+\large{
+Since we have entities exchanging information it is useful to be able to tell the relationship between the volume of the amount of data send to and from each endpoint. In this case if we observe asymmetry between two endpoints (i.e. one entity sends much more than it receives) it can be an indication that there is something unexpected going on. Of course an asymmetry can also be expected. }}
+
+\parbox{\linewidth}{
+\justify
+\large{
+We choose to visualize the relationship of the volume of data exchanged between two endpoints by employing a Chord diagram, which is an arrangement of the entities across the circumference of a circle, with the relationships between them drawn as arcs connecting the two points. An example can be seen below:
+}}
+
+\begin{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.37]{chord1.png}
+		\caption[]{Chord diagram. The chords represent Autonomous Systems}
+		\label{fig:det}
+	\end{figure}
+\end{center}
+\clearpage
+
+\parbox{\linewidth}{
+\justify
+\large{
+This example demonstrates the relationship between the top 10 autonomous systems in the dataset. Hovering over each chord reveals the relationships for that specific entity as shown in the graph below:
+}}
+
+\begin{center}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.40]{chord2.png}
+		\caption[]{Chord diagram. The chords represent Autonomous Systems}
+		\label{fig:det}
+	\end{figure}
+\end{center}
+
+\clearpage
+
+
+
+\subsection{Change}
+\subsection{Composition \& Presence}
+\subsection{Trend \& Correlation}
+\section{System Architecture}
+\section{Proof of Concept}
+
+\chapter{Conclusions}
+\chapter{Future Work}
+\section{Extension} 
+\subsection{Further Visualization Types}
+\subsection{Alternative Projections}
+\section{System Realisation}
+\section{Assessment}
+
+ \begin{thebibliography}{99}
 \bibitem{eda1}
 Behrens, J. (1997). Principles and procedures of exploratory data analysis. Psychological Methods, 2(2), pp.131-160.
 \bibitem{eda2}
@@ -65,8 +440,20 @@ Tukey, J. (1977). Exploratory data analysis. Reading, Mass.: Addison-Wesley Pub.
 Keim, D., Mansman, F., Schneidewind, J., Thomas, J. and Ziegler, H. (2008). Visual Ana- lytics: Scope and Challenges. Lecture notes in Computer Science. Springer, pp.76-90.
 \bibitem{cda1}
 Ren, D. (2009). Understanding Statistical Hypothesis Testing. Journal of Emergency Nursing, 35(1), pp.57-59.
+\bibitem{schneideman}
+Schneiderman, B. (1996). The Eyes Have It: A Task by Data Type Taxonomy for Informa- tion Visualizations. Institute for Systems Research.
 \bibitem{tufte1}
 Tufte, E. (1983). The visual display of quantitative information.
+\bibitem{fry1}
+Fry, B. (2004). Computational Information Design. PhD. MIT.
+\bibitem{preattentive}
+Van der Heijden, A. H. C. (1996). Perception for selection, selection for action, and action for perception. Visual Cognition, 3(4), 357-361.
+\bibitem{ware}
+Ware, C. (2004). Information visualization. San Francisco, CA: Morgan Kaufman.
+\bibitem{treisman}
+Treisman, A. (1985). Preattentive processing in vision. Computer Vision, Graphics, and Image Processing, 31(2), pp.156-177.
+\bibitem{few1}
+Perceptual Edge, (2004). Tapping the Power of Visual Perception. [online] Available at: \url{http://www.perceptualedge.com/articles/ie/visual_perception.pdf}.
 \end{thebibliography}
 
 \end{document}
